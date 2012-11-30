@@ -1,0 +1,14 @@
+Perl-LRU
+--------
+I wanted an LRU hash for one of my irssi scripts. Threw this together instead of using one from CPAN.
+Works for me, etc.
+
+Example
+-------
+```perl
+use LRU;
+my %hash;
+tie %hash, 'LRU', size=>15; # Default is 10
+
+# Now use the hash as normal and it will be limited to 15 entries.
+```
