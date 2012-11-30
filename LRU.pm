@@ -1,8 +1,10 @@
 package LRU;
 require Tie::Hash;
+use strict;
+use warnings;
 use Time::HiRes qw /time/;
 
-@ISA = qw(Tie::StdHash);
+my @ISA = qw(Tie::StdHash);
 
 sub TIEHASH {
 	my ($class, %args) = @_;
