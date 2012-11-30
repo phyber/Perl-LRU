@@ -4,8 +4,6 @@ use strict;
 use warnings;
 use Time::HiRes qw /time/;
 
-my @ISA = qw(Tie::StdHash);
-
 sub TIEHASH {
 	my ($class, %args) = @_;
 	my $hash = bless {
